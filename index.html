@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>I Really Miss You ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #ff9a9e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.card {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(255,255,255,0.20);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 30px 22px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.heart {
+    font-size: 60px;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+h1 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.note {
+    background: rgba(255,255,255,0.18);
+    border-radius: 20px;
+    padding: 18px;
+    margin: 15px 0;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.meter-title {
+    font-size: 23px;
+    margin-top: 30px;
+}
+
+.meter-box {
+    position: relative;
+    width: 100%;
+    height: 330px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.meter-track {
+    width: 45px;
+    height: 300px;
+    background: rgba(255,255,255,0.35);
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.meter-fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #ff1744, #ff80ab);
+    border-radius: 30px;
+    transition: height 0.4s ease;
+}
+
+.slider {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    writing-mode: vertical-lr;
+    direction: rtl;
+    height: 300px;
+    opacity: 0;
+    cursor: grab;
+}
+
+.meter-text {
+    font-size: 21px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.big-love {
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px white;
+    }
+    to {
+        text-shadow: 0 0 25px white;
+    }
+}
+
+.photo {
+    margin-top: 25px;
+}
+
+.photo img {
+    width: 100%;
+    max-width: 400px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.floating-heart {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    animation: floatUp 5s linear forwards;
+    font-size: 25px;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+@media(max-width:500px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .note {
+        font-size: 16px;
+    }
+
+    .photo img {
+        height: 280px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="heart">❤️</div>
+
+    <h1>I REALLY MISS YOU</h1>
+
+    <h1>PRIYANSHI ❤️</h1>
+
+    <div class="subtitle">
+        Meri jaan, I just wanted you to know something... 🥺
+    </div>
+
+    <div class="note">
+        Sometimes I just randomly think about you,
+        and suddenly I realise how much I miss you. ❤️
+    </div>
+
+    <div class="note">
+        I miss your presence, your smile,
+        your little talks and all those small moments
+        that somehow make my day better. 🥺💕
+    </div>
+
+    <div class="note">
+        Distance ya busy days chahe jitne bhi ho,
+        you are always somewhere in my thoughts.
+        Meri jaan, I genuinely miss you so much. ❤️
+    </div>
+
+    <div class="meter-title">
+        📊 HOW MUCH DO I MISS YOU?
+    </div>
+
+    <div class="meter-box">
+
+        <div class="meter-track">
+            <div class="meter-fill" id="fill"></div>
+        </div>
+
+        <input
+            id="slider"
+            class="slider"
+            type="range"
+            min="0"
+            max="100"
+            value="100"
+        >
+
+    </div>
+
+    <div class="meter-text" id="meterText">
+        100% — I MISS YOU SO MUCH 😭❤️
+    </div>
+
+    <div class="note">
+        Try taking the meter down... 👀
+        <br>
+        It keeps coming back because apparently
+        my missing-you level has no limit. 😭❤️
+    </div>
+
+    <div class="big-love">
+        I LOVE YOU MERI JAAN ❤️
+    </div>
+
+    <div class="photo">
+        <!-- Replace photo.jpg with your actual photo name -->
+        <img src="photo3.jpg" alt="Our Memory ❤️">
+    </div>
+
+</div>
+
+<script>
+
+const slider = document.getElementById("slider");
+const fill = document.getElementById("fill");
+const meterText = document.getElementById("meterText");
+
+slider.addEventListener("input", function() {
+
+    if (this.value < 100) {
+
+        meterText.innerHTML =
+            "NOPE 😭❤️ I MISS YOU TOO MUCH!";
+
+        setTimeout(() => {
+
+            this.value = 100;
+            fill.style.height = "100%";
+
+            meterText.innerHTML =
+                "100% — I MISS YOU SO MUCH 😭❤️";
+
+        }, 500);
+
+    } else {
+
+        fill.style.height = this.value + "%";
+
+    }
+});
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "floating-heart";
+
+    const hearts = ["❤️","💖","💕","💗","💓","🥺"];
+
+    heart.innerText =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.animationDuration =
+        (3 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 7000);
+}
+
+setInterval(createHeart, 900);
+
+</script>
+
+</body>
+</html>
